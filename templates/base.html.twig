@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Hello City!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
+    <div class="container text-center">
+    <br>
+    <br>
+    <main role"main">
         {% block body %}{% endblock %}
+    </main>
+            <footer>
+                <p>
+                     &copy; Copyright {{ 'now'|date('Y','Europe/Paris') }}
+                     &middot; <a href="{{ path('app_about') }}">About Us</a>
+                </p>
+            </footer>
+    </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

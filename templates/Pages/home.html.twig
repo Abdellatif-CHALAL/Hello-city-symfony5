@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <img style=" width : 200px; "
+     src=" {{ asset('images/france-flag.png') }} "
+     alt="France Flag">
+
     <h1>Hello From France </h1>
    <p> It's currently {{ 'now'|date('h:i A','Europe/Paris') }}</p>
-   <footer>
-    <p>
-        &copy; Copyright {{ 'now'|date('Y','Europe/Paris') }}
-        &middot; <a href="#">About Us</a>
-    </p>
-   </footer>
+   
+ 
 {% endblock %}
